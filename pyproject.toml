@@ -1,0 +1,22 @@
+[project]
+name = "shopify-mcp-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.2.0",
+    "ShopifyAPI>=12.7.0",
+    "python-dotenv>=1.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+packages = ["src/shopify_mcp_server"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/shopify_mcp_server"]

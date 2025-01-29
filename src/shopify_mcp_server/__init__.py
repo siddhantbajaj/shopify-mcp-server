@@ -1,0 +1,1 @@
+"""Shopify MCP Server package."""
