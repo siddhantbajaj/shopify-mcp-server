@@ -2,10 +2,11 @@
 
 A Model Context Protocol (MCP) server to connect clients like Claude with Shopify store data. This server exposes tools for retrieving product and customer information from your Shopify store.
 
-## Features
+## Tools
 
 - `get-product-list`: Retrieve a list of products from your Shopify store
 - `get-customer-list`: Retrieve a list of customers from your Shopify store
+- More to come soon
 
 ## Prerequisites
 
