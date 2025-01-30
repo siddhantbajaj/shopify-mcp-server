@@ -1,0 +1,29 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - shopifyShopUrl
+      - shopifyApiKey
+      - shopifyPassword
+      - shopifyAccessToken
+    properties:
+      shopifyShopUrl:
+        type: string
+        description: Your Shopify store URL.
+      shopifyApiKey:
+        type: string
+        description: Your Shopify API key.
+      shopifyPassword:
+        type: string
+        description: Your Shopify API password.
+      shopifyAccessToken:
+        type: string
+        description: Your Shopify access token.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    config => ({ command: 'python', args: ['-m', 'shopify_mcp_server.server'], env: { SHOPIFY_SHOP_URL: config.shopifyShopUrl, SHOPIFY_API_KEY: config.shopifyApiKey, SHOPIFY_PASSWORD: config.shopifyPassword, SHOPIFY_ACCESS_TOKEN: config.shopifyAccessToken } })
