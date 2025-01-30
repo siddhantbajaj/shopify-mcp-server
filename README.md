@@ -1,5 +1,7 @@
 # Shopify MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@siddhantbajaj/shopify-mcp-server)](https://smithery.ai/server/@siddhantbajaj/shopify-mcp-server)
+
 A Model Context Protocol (MCP) server to connect clients like Claude with Shopify store data. This server exposes tools for retrieving product and customer information from your Shopify store.
 
 ## Tools
@@ -15,6 +17,14 @@ A Model Context Protocol (MCP) server to connect clients like Claude with Shopif
 - Shopify API credentials (API Key, Password, and Access Token)
 
 ## Installation
+
+### Installing via Smithery
+
+To install Shopify MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@siddhantbajaj/shopify-mcp-server):
+
+```bash
+npx -y @smithery/cli install @siddhantbajaj/shopify-mcp-server --client claude
+```
 
 1. Clone the repository:
 ```bash
